@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flame Labs</title>
-    <link rel="icon" type="image/png" href="images/flames.png?v=1" />
+    <link rel="icon" type="image/png" href="images/flames.png" />
     <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
@@ -16,6 +16,7 @@
             <span class="header-title">Flame Labs</span>
           </div>
           <nav class="header-nav">
+            <a href="#about">welcome</a>
             <a href="html/join.html">Join</a>
           </nav>
         </div>
@@ -111,28 +112,44 @@
           </form>
           </div>
 
-    <div class="glass-footer">
-    <h3>
-        Powered by <span class="flamecore-letter">F</span>lameCore
-    </h3>
-    <p>
-        <span style="color:#FF6B6B;">F</span>ocus, 
-        <span style="color:#FFD93D;">U</span>nleash, 
-        <span style="color:#6BCB77;">E</span>levate, 
-        <span style="color:#4D96FF;">L</span>aunch
-    </p>
-    <div class="social-links">
-        <a href="https://twitter.com/yourhandle" target="_blank" class="social-link"><i class="fab fa-twitter fa-lg"></i></a>
-        <a href="https://instagram.com/yourhandle" target="_blank" class="social-link"><i class="fab fa-instagram fa-lg"></i></a>
-        <a href="mailto:hello@flamecore.com" class="social-link"><i class="fas fa-envelope fa-lg"></i></a>
+<div class="glass-footer">
+    <div class="footer-content">
+        <p class="powered-by">
+            Powered by <span class="brand">F<span style="color:#BFFF00;">lameCore</span></span>
+            <a href="https://twitter.com" target="_blank" class="social-link-footer" title="X (Twitter)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2s9 5 20 5a9.5 9.5 0 00-9-5.5c4.75 2.25 9-7 9-7z"/>
+              </svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" class="social-link-footer" title="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37Z"/>
+                <circle cx="17.5" cy="6.5" r="1.5"/>
+              </svg>
+            </a>
+            <a href="mailto:contact@flamecore.com" class="social-link-footer" title="Email">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/>
+              </svg>
+            </a>
+        </p>
+        <p class="fuel-slogan">
+            <span style="color:#FF6B6B;">F</span>ocus, 
+            <span style="color:#FFD93D;">U</span>nleash, 
+            <span style="color:#6BCB77;">E</span>levate, 
+            <span style="color:#4D96FF;">L</span>aunch
+        </p>
+        <p class="copyright">© <span class="brand">FlameCore</span> 2025</p>
     </div>
 </div>
 
 <style>
 .glass-footer {
-    max-width: 450px;
+    max-width: 500px;
     margin: 40px auto;
-    padding: 25px 30px;
+    padding: 30px 25px;
     background: rgba(255, 255, 255, 0.08); 
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
@@ -144,50 +161,56 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.glass-footer h3 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-    font-weight: 700;
-}
-
-.flamecore-letter {
-    color: #BFFF00; /* lemon green */
-}
-
-.glass-footer p {
-    font-size: 1rem;
-    margin-bottom: 15px;
+.footer-content .powered-by {
+    font-size: 1.2rem;
     font-weight: 600;
+    color: #fff;
+    margin-bottom: 10px;
 }
 
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
+.brand {
+    color: #fff; /* default brand color white */
 }
 
-.social-link {
+.brand span {
+    color: #BFFF00; /* F in FlameCore lemon green */
+}
+
+.fuel-slogan {
+    margin: 10px 0 15px 0;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.social-link-footer {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 45px;
-    height: 45px;
+    margin-left: 10px;
+    width: 28px;
+    height: 28px;
     border-radius: 50%;
     background: rgba(191, 255, 0, 0.1);
     color: #BFFF00;
-    font-size: 1.2rem;
     text-decoration: none;
     transition: all 0.3s ease;
     border: 1px solid rgba(191, 255, 0, 0.3);
 }
 
-.social-link:hover {
+.social-link-footer:hover {
     background: rgba(191, 255, 0, 0.25);
     color: #fff;
     box-shadow: 0 0 12px rgba(191, 255, 0, 0.5);
     transform: translateY(-2px);
 }
+
+.copyright {
+    font-size: 0.85rem;
+    color: #ddd;
+    margin-top: 10px;
+}
 </style>
+
 
 </style>
 

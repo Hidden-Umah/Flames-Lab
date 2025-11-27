@@ -349,20 +349,25 @@ body {
     text-align: center;
 }
 
-.footer-links {
+.powered-by {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.92);
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
-    gap: 20px;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
 }
 
-.social-link {
-    display: flex;
+.social-link-footer {
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 28px;
+    height: 28px;
     border-radius: 50%;
     background: rgba(191, 255, 0, 0.1);
     color: #BFFF00;
@@ -371,24 +376,16 @@ body {
     border: 1px solid rgba(191, 255, 0, 0.3);
 }
 
-.social-link:hover {
+.social-link-footer:hover {
     background: rgba(191, 255, 0, 0.2);
     color: #fff;
     box-shadow: 0 0 12px rgba(191, 255, 0, 0.4);
-    transform: translateY(-3px);
+    transform: scale(1.1);
 }
 
-.social-link svg {
-    width: 20px;
-    height: 20px;
-}
-
-.join-message {
-    font-size: 0.95rem;
-    color: rgba(255,255,255,0.92);
-    font-weight: 500;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 15px 0;
+.social-link-footer svg {
+    width: 14px;
+    height: 14px;
 }
 
 .copyright {
