@@ -7,21 +7,81 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #333;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.header {
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 15px 20px;
+    position: relative;
+    z-index: 10;
+    border-bottom: 2px solid rgba(191, 255, 0, 0.2);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.header-logo-img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.header-title {
+    background: linear-gradient(135deg, #fff, #BFFF00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.header-nav {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.header-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.header-nav a:hover {
+    color: #BFFF00;
+    border-bottom-color: #BFFF00;
 }
 
 .main {
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
-    background-image: url("../images/modern-background-with-white-round-lines.jpg");
+    background-image: url("../images/futurist-texture-wallpaper.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     position: relative;
-    padding: 40px 20px;
     overflow-y: auto;
 }
 
@@ -33,19 +93,22 @@ body {
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.1);
-    z-index: 1;
+    z-index: 2;
+    pointer-events: none;
 }
 
 .logo {
     text-align: center;
+    margin-top: 40px;
     margin-bottom: 40px;
     position: relative;
-    z-index: 2;
+    z-index: 3;
     animation: slideDown 0.8s ease-out;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+
     flex-wrap: wrap;
 }
 
@@ -76,43 +139,89 @@ body {
 
 .logo h3 {
     font-size: 1.5rem;
+    font-weight: 600;
     color: #BFFF00;
-    font-weight: 500;
     letter-spacing: 1px;
+    
 }
 
 .content {
     position: relative;
-    z-index: 2;
+    z-index: 3;
     animation: slideUp 0.8s ease-out;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 20px 40px 20px;
 }
 
-.info {
-    background: rgba(255, 255, 255, 0);
-    padding: 40px 50px;
-    border-radius: 12px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-    max-width: 700px;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
 
-.info p {
+.description-box p {
     font-size: 1.1rem;
     line-height: 1.8;
     color: #333;
     font-weight: 400;
+    color: white;
 }
+
+.side-content {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    align-items: stretch;
+}
+
+.info {
+    max-width: 700px;
+    margin: 50px auto;       /* center the div */
+    padding: 30px 25px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(174, 233, 64, 0.1);
+    text-align: center;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #ebebeb;
+    background-color: #333333a8;
+    border: 1px solid yellowgreen;
+}
+
+.info h2 {
+    font-size: 2.5em;        /* bigger heading */
+    margin-bottom: 20px;
+    color:greenyellow;          /* Flames accent color */
+    font-weight: 700;
+}
+
+.info p {
+    font-size: 1.1em;
+    color: #d4d4d4;
+    margin-bottom: 10px;
+}
+
+.info strong {
+    color: yellowgreen;          /* highlight strong text */
+}
+
+.form-container {
+    border-left: none;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+
 
 .form-container {
     background: rgba(255, 255, 255, 0);
     padding: 40px 50px;
     border-radius: 12px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-    max-width: 700px;
+    width: 400px;
+    flex-shrink: 0;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    margin-top: 30px;
 }
 
 .user-form {
@@ -130,10 +239,11 @@ body {
 .form-group label {
     font-size: 1rem;
     font-weight: 600;
-    color: #333;
+    color: #BFFF00;
 }
 
 .form-group input[type="text"],
+.form-group input[type="email"],
 .form-group select {
     padding: 12px 15px;
     border: 2px solid #ddd;
@@ -141,6 +251,8 @@ body {
     font-size: 1rem;
     transition: all 0.3s ease;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #666;
+    background-color: #f5f5f5;
 }
 
 .form-group input[type="text"]:focus,
@@ -154,7 +266,6 @@ body {
     color: #999;
 }
 
-.form-group input[type="email"],
 .form-group textarea {
     padding: 12px 15px;
     border: 2px solid #ddd;
@@ -162,6 +273,8 @@ body {
     font-size: 1rem;
     transition: all 0.3s ease;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #666;
+    background-color: #f5f5f5;
 }
 
 .form-group input[type="email"]:focus,
@@ -247,13 +360,14 @@ body {
 }
 
 .footer {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(12px);
     padding: 30px 20px;
-    margin-top: auto;
     position: relative;
-    z-index: 3;
-    backdrop-filter: blur(10px);
-    border-top: 1px solid rgba(191, 255, 0, 0.2);
+    z-index: 10;
+    border-top: 1px solid rgba(191, 255, 0, 0.12);
+    margin-top: auto;
+    box-shadow: 0 -6px 30px rgba(0, 0, 0, 0.45);
 }
 
 .footer-content {
@@ -265,7 +379,7 @@ body {
 
 .footer-content > p:first-child {
     font-size: 0.95rem;
-    color: #fff;
+    color: #f5f5f5;
     font-weight: 400;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0 0 20px 0;
@@ -320,7 +434,7 @@ body {
 
 .join-message {
     font-size: 0.95rem;
-    color: #fff;
+    color: #f1f1f1;
     font-weight: 500;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 15px 0;
@@ -341,13 +455,23 @@ body {
 
 .copyright {
     font-size: 0.85rem;
-    color: #aaa;
+    color: #ddd;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-top: 10px;
 }
 
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
+    .header-nav {
+        gap: 20px;
+    }
+
+    .header-nav a {
+        font-size: 0.95rem;
+    }
+
     .main {
         padding: 20px;
     }
@@ -370,9 +494,20 @@ body {
         font-size: 1.2rem;
     }
 
-    .info {
+    .content {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 20px 20px 20px;
+    }
+
+    .description-box {
+        width: 100%;
         padding: 30px 20px;
-        max-width: 100%;
+    }
+
+    .info {
+        width: 100%;
+        padding: 30px 20px;
     }
 
     .info p {
@@ -380,10 +515,30 @@ body {
         line-height: 1.6;
     }
 
+    .side-content {
+        width: 100%;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .description-box {
+        width: 100%;
+    }
+
+    /* Restore borders and rounded corners on smaller screens */
+    .info,
     .form-container {
+        border-left: 1px solid rgba(255, 255, 255, 0.2);
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+        border-top-right-radius: 12px;
+        border-bottom-right-radius: 12px;
+        border-top-left-radius: 12px;
+        border-bottom-left-radius: 12px;
+    }
+
+    .form-container {
+        width: 100%;
         padding: 30px 20px;
-        max-width: 100%;
-        margin-top: 20px;
     }
 
     .form-group {
