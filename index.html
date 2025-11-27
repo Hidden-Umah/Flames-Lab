@@ -6,6 +6,9 @@
     <title>Flame Labs</title>
     <link rel="icon" type="image/png" href="images/flames.png" />
     <link rel="stylesheet" href="css/index.css" />
+
+    <!-- EmailJS Library -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   </head>
 
   <body>
@@ -13,7 +16,11 @@
       <header class="header">
         <div class="header-content">
           <div class="header-logo">
-            <img src="images/flames.png" alt="FlameCore Logo" class="header-logo-img" />
+            <img
+              src="images/flames.png"
+              alt="FlameCore Logo"
+              class="header-logo-img"
+            />
             <span class="header-title">Flame Labs</span>
           </div>
           <nav class="header-nav">
@@ -33,15 +40,20 @@
             <h2>Welcome to Suggestion Space</h2>
 
             <p>
-              FlameCore is building a powerful new IDE for developers, and we want your input.<br>
-              Tell us the features, tools, improvements, or small touches you’ve always wished an IDE had.<br>
-              Your suggestions will help shape an IDE built exactly for your workflow.
+              FlameCore is building a powerful new IDE for developers, and we
+              want your input.<br />
+              Tell us the features, tools, improvements, or small touches you’ve
+              always wished an IDE had.<br />
+              Your suggestions will help shape an IDE built exactly for your
+              workflow.
             </p>
 
             <p>
-              Whether you're a student, professional, developer, or hobbyist, we value your insights.
+              Whether you're a student, professional, developer, or hobbyist, we
+              value your insights.
               <br />
-              Share your ideas and help us create an IDE that truly empowers developers everywhere.
+              Share your ideas and help us create an IDE that truly empowers
+              developers everywhere.
             </p>
           </div>
         </div>
@@ -52,7 +64,13 @@
           <form id="suggestionForm" class="user-form">
             <div class="form-group">
               <label for="name">Name</label>
-              <input type="text" id="name" name="name" placeholder="Enter your name" required />
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                required
+              />
             </div>
 
             <div class="form-group">
@@ -67,14 +85,26 @@
 
             <div class="form-group">
               <label for="school">School</label>
-              <input type="text" id="school" name="school" placeholder="Enter your school name" required />
+              <input
+                type="text"
+                id="school"
+                name="school"
+                placeholder="Enter your school name"
+                required
+              />
             </div>
 
             <div class="form-group">
               <label>Role</label>
               <div class="radio-group">
                 <div class="radio-item">
-                  <input type="radio" id="student" name="role" value="student" required />
+                  <input
+                    type="radio"
+                    id="student"
+                    name="role"
+                    value="student"
+                    required
+                  />
                   <label for="student">Student</label>
                 </div>
                 <div class="radio-item">
@@ -82,7 +112,12 @@
                   <label for="worker">Worker</label>
                 </div>
                 <div class="radio-item">
-                  <input type="radio" id="developer" name="role" value="developer" />
+                  <input
+                    type="radio"
+                    id="developer"
+                    name="role"
+                    value="developer"
+                  />
                   <label for="developer">Developer</label>
                 </div>
                 <div class="radio-item">
@@ -110,7 +145,13 @@
 
             <div class="form-group">
               <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="Enter your email" required />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+              />
             </div>
 
             <div class="form-group">
@@ -132,40 +173,26 @@
         <div class="glass-footer">
           <div class="footer-content">
             <p class="powered-by">
-              Powered by <span class="brand">F<span style="color:#BFFF00;">lameCore</span></span>
-              <a href="https://twitter.com" target="_blank" class="social-link-footer" title="X (Twitter)">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2s9 5 20 5a9.5 9.5 0 00-9-5.5c4.75 2.25 9-7 9-7z" />
-                </svg>
-              </a>
-              <a href="https://instagram.com" target="_blank" class="social-link-footer" title="Instagram">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-                  <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37Z" />
-                  <circle cx="17.5" cy="6.5" r="1.5"/>
-                </svg>
-              </a>
-              <a href="mailto:contact@flamecore.com" class="social-link-footer" title="Email">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="2" y="4" width="20" height="16" rx="2"/>
-                  <path d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/>
-                </svg>
-              </a>
+              Powered by
+              <span class="brand"
+                >F<span style="color: #bfff00">lameCore</span></span
+              >
             </p>
-
             <p class="fuel-slogan">
-              <span style="color:yellowgreen;">F</span>ocus,
-              <span style="color:yellowgreen;">U</span>nleash,
-              <span style="color:yellowgreen;">E</span>levate,
-              <span style="color:yellowgreen;">L</span>aunch
+              <span style="color: yellowgreen">F</span>ocus,
+              <span style="color: yellowgreen">U</span>nleash,
+              <span style="color: yellowgreen">E</span>levate,
+              <span style="color: yellowgreen">L</span>aunch
             </p>
-
-            <p class="copyright">© <span class="brand" style="color: #BFFF00;">FlameCore</span> 2025</p>
+            <p class="copyright">
+              © <span class="brand" style="color: #bfff00">FlameCore</span> 2025
+            </p>
           </div>
         </div>
-
       </div>
     </div>
 
+    <!-- ====================== Your JS ====================== -->
+    <script src="js/index.js"></script>
   </body>
 </html>
