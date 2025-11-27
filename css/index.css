@@ -175,35 +175,40 @@ body {
 }
 
 .info {
-    max-width: 700px;
-    margin: 50px auto;       /* center the div */
-    padding: 30px 25px;
-    background-color: #ffffff;
+    background: rgba(255, 255, 255, 0);
+    padding: 40px 50px;
     border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(174, 233, 64, 0.1);
-    text-align: center;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #ebebeb;
-    background-color: #333333a8;
-    border: 1px solid yellowgreen;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    flex-shrink: 0;
+    backdrop-filter: blur(10px);
+    border-left: 2px solid rgba(191, 255, 0, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .info h2 {
-    font-size: 2.5em;        /* bigger heading */
+    font-size: 2.2rem;
+    color: #fff;
     margin-bottom: 20px;
-    color:greenyellow;          /* Flames accent color */
-    font-weight: 700;
+    background: linear-gradient(135deg, #BFFF00, #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .info p {
-    font-size: 1.1em;
-    color: #d4d4d4;
-    margin-bottom: 10px;
-}
-
-.info strong {
-    color: yellowgreen;          /* highlight strong text */
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #fff;
+    font-weight: 400;
 }
 
 .form-container {
