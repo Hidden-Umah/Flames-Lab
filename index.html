@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flame Labs</title>
+    <link rel="icon" type="image/png" href="images/flames.png" />
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="logo">
+        <img src="images/flames.png" alt="FlameCore Logo" class="logo-img" />
+        <h1>Flames Labs</h1>
+        <h3>FlameCore Initiative</h3>
+      </div>
+      <div class="content">
+        <div class="info">
+          <p>
+            A global space for users and developers to share <br />
+            the features, improvements, and little <br />
+            fixes they wish to see in an IDE. This platform <br />
+            gathers ideas from around the world, helping the Flames team <br />
+            understand what matters most and shape an IDE that <br />
+            meets real developer needs.
+          </p>
+        </div>
+        <div class="form-container">
+          <form class="user-form">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Enter your name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="gender">Gender</label>
+              <select id="gender" name="gender" required>
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="school">School</label>
+              <input type="text" id="school" name="school" placeholder="Enter your school name" required />
+            </div>
+
+            <div class="form-group">
+              <label>Role</label>
+              <div class="radio-group">
+                <div class="radio-item">
+                  <input type="radio" id="student" name="role" value="student" required />
+                  <label for="student">Student</label>
+                </div>
+                <div class="radio-item">
+                  <input type="radio" id="worker" name="role" value="worker" />
+                  <label for="worker">Worker</label>
+                </div>
+                <div class="radio-item">
+                  <input type="radio" id="developer" name="role" value="developer" />
+                  <label for="developer">Developer</label>
+                </div>
+                <div class="radio-item">
+                  <input type="radio" id="tutor" name="role" value="tutor" />
+                  <label for="tutor">Tutor</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="country">Country</label>
+              <select id="country" name="country" required>
+                <option value="">Select Country</option>
+                <option value="ghana">Ghana</option>
+                <option value="nigeria">Nigeria</option>
+                <option value="south-africa">South Africa</option>
+                <option value="kenya">Kenya</option>
+                <option value="tanzania">Tanzania</option>
+                <option value="uganda">Uganda</option>
+                <option value="egypt">Egypt</option>
+                <option value="ethiopia">Ethiopia</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="Enter your email" required />
+            </div>
+
+            <div class="form-group">
+              <label for="description">Description</label>
+              <textarea id="description" name="description" placeholder="Share your ideas, suggestions, or feedback..." rows="5"></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <p>Powered by <span class="brand">FlameCore</span> — a forward-thinking tech startup dedicated to building smarter tools and solving real-world problems.</p>
+        <div class="footer-links">
+          <a href="https://twitter.com" target="_blank" class="social-link" title="X (Twitter)">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2s9 5 20 5a9.5 9.5 0 00-9-5.5c4.75 2.25 9-7 9-7z"/>
+            </svg>
+          </a>
+          <a href="https://instagram.com" target="_blank" class="social-link" title="Instagram">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37Z"/>
+              <circle cx="17.5" cy="6.5" r="1.5"/>
+            </svg>
+          </a>
+          <a href="mailto:contact@flamecore.com" class="social-link" title="Email">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/>
+            </svg>
+          </a>
+        </div>
+        <p class="join-message">Interested in joining the team? <a href="html/join.html" class="join-link">We welcome passionate minds!</a></p>
+        <p class="copyright">© <span class="brand">FlameCore</span> 2025</p>
+      </div>
+    </footer>
+  </body>
+</html>

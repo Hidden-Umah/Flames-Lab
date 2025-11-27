@@ -1,0 +1,440 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+.main {
+    width: 100vw;
+    min-height: 100vh;
+    background-image: url("../images/modern-background-with-white-round-lines.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 40px 20px;
+    overflow-y: auto;
+}
+
+.main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 2;
+    animation: slideDown 0.8s ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.logo-img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.2));
+    transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.1);
+}
+
+.logo h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #fff, #BFFF00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: none;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.logo h3 {
+    font-size: 1.5rem;
+    color: #BFFF00;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    animation: slideUp 0.8s ease-out;
+}
+
+.info {
+    background: rgba(255, 255, 255, 0);
+    padding: 40px 50px;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    max-width: 700px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.info p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+    font-weight: 400;
+}
+
+.form-container {
+    background: rgba(255, 255, 255, 0);
+    padding: 40px 50px;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    max-width: 700px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 30px;
+}
+
+.user-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.form-group input[type="text"],
+.form-group select {
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-group input[type="text"]:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #BFFF00;
+    box-shadow: 0 0 8px rgba(191, 255, 0, 0.3);
+}
+
+.form-group input[type="text"]::placeholder {
+    color: #999;
+}
+
+.form-group input[type="email"],
+.form-group textarea {
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #BFFF00;
+    box-shadow: 0 0 8px rgba(191, 255, 0, 0.3);
+}
+
+.form-group input[type="email"]::placeholder,
+.form-group textarea::placeholder {
+    color: #999;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.radio-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.radio-item input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: #BFFF00;
+}
+
+.radio-item label {
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.submit-btn {
+    padding: 14px 40px;
+    background: linear-gradient(135deg, #BFFF00, #CCFF00);
+    color: #333;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(191, 255, 0, 0.3);
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(191, 255, 0, 0.5);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.footer {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 30px 20px;
+    margin-top: auto;
+    position: relative;
+    z-index: 3;
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(191, 255, 0, 0.2);
+}
+
+.footer-content {
+    max-width: 700px;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+}
+
+.footer-content > p:first-child {
+    font-size: 0.95rem;
+    color: #fff;
+    font-weight: 400;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0 0 20px 0;
+    line-height: 1.5;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.brand {
+    color: #BFFF00;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(191, 255, 0, 0.1);
+    color: #BFFF00;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(191, 255, 0, 0.3);
+}
+
+.social-link:hover {
+    background: rgba(191, 255, 0, 0.2);
+    color: #fff;
+    box-shadow: 0 0 12px rgba(191, 255, 0, 0.4);
+    transform: translateY(-3px);
+}
+
+.social-link svg {
+    width: 20px;
+    height: 20px;
+}
+
+.join-message {
+    font-size: 0.95rem;
+    color: #fff;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 15px 0;
+}
+
+.join-link {
+    color: #BFFF00;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid rgba(191, 255, 0, 0.5);
+}
+
+.join-link:hover {
+    border-bottom-color: #BFFF00;
+    text-shadow: 0 0 8px rgba(191, 255, 0, 0.5);
+}
+
+.copyright {
+    font-size: 0.85rem;
+    color: #aaa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main {
+        padding: 20px;
+    }
+
+    .logo {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .logo-img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .logo h1 {
+        font-size: 2.5rem;
+    }
+
+    .logo h3 {
+        font-size: 1.2rem;
+    }
+
+    .info {
+        padding: 30px 20px;
+        max-width: 100%;
+    }
+
+    .info p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .form-container {
+        padding: 30px 20px;
+        max-width: 100%;
+        margin-top: 20px;
+    }
+
+    .form-group {
+        gap: 6px;
+    }
+
+    .form-group label {
+        font-size: 0.95rem;
+    }
+
+    .form-group input[type="text"],
+    .form-group select {
+        padding: 10px 12px;
+        font-size: 0.95rem;
+    }
+
+    .radio-group {
+        gap: 10px;
+    }
+
+    .radio-item label {
+        font-size: 0.95rem;
+    }
+
+    .submit-btn {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-content {
+        text-align: center;
+    }
+
+    .footer-text p {
+        font-size: 0.85rem;
+    }
+
+    .footer-links {
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    .social-link {
+        width: 36px;
+        height: 36px;
+    }
+
+    .social-link svg {
+        width: 18px;
+        height: 18px;
+    }
+}
